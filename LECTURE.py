@@ -1,31 +1,45 @@
 # Importing necessary libraries
-import random
+import mysql.connector
+import pandas as pd
 import numpy as np
 import math
+import random
 
-# Taking inputs from the user
-days = int(input("Enter the number of days in a week: "))
-hours = int(input("Enter the number of Hours in a day: "))
-tot_sub = int(input("Enter total subjects in semester: "))
+# Connecting SQL with Python
+mydb = mysql.connector.connect(
+    host = "localhost",
+    user = "root",
+    password = "Rakesh@1968",
+    database = "TimeTable"
+)
+cur2 = mydb.cursor() #COURSES
 
+
+print("Enter the Program: ")
+Program = input()
+
+print("Enter the Semester: ")
+Semester = int(input())
+
+cur2.execute(f"SELECT * FROM Courses WHERE semester_id = {Semester} AND Program_name = '{Program}'")
 
 d = 0
 lst = []
-# Adding subjects and frequency of classes
-for i in range(0, tot_sub):
-    sub = input("Enter name of the subject :")
-    f = int(input("Enter number of classes in a week :"))
-    d = d + f
-    for i in range(0, f):
+
+for row in cur2.fetchall():
+    sub = row[0]
+    freq = row[2]
+    d = d + freq
+    for i in range(0, freq):
         lst.append(sub)
 
-# Filling the empty spaces with '?'
 if (d > 40):
     print("invalid input")
 else:
     for i in range(0, 40 - d):
         ele = "?"
         lst.append(ele)
+
 
 # adding inputs for lecture halls and batches
 lecture = int(input("Enter number of lecture halls avilable: "))
@@ -36,13 +50,12 @@ group = math.ceil(num_batches/lecture)
 print("Total groups formed for lectures: ",group)
 print("\n \n")
 
-
-
 # TIMETABLE CODE for lectures
 # Defining Rows(time) and columns(days) of matrix
 R = 8
 C = 5
 print("Timetable for each lecture hall \n")
+
 
 
 for p in range(group):
@@ -69,7 +82,7 @@ for p in range(group):
 
         # This loop shuffles the elements in each row of matrix1 using the shuffle
         #  function from the random module, and then transposes
-        for e in range(days):
+        for e in range(5):
             random.shuffle(matrix1[e])
         m1 = np.array(matrix1)
         matrix2 = m1.T
@@ -89,4 +102,6 @@ for p in range(group):
         for j in range(C):
             print(matrix2[i][j], end="         ")
         print()
+
+
 
