@@ -1,0 +1,234 @@
+<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+html, body{
+  font-family: 'Lato', sans-serif;
+  color: #1f4568;
+}
+body{
+background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+}
+
+.collapse{
+ display: block;
+}
+.header{
+  padding: 30px 40px;
+}
+
+.header__menu {
+    float: right;
+}
+.header__el{
+    display: inline-block;
+}
+.header__img{
+  display: inline-block;
+  vertical-align: middle;
+}
+.header__logo, .header__menu{
+  display: inline-block;
+  font-size: 5px;
+
+}
+
+.header__light{
+  color: #8198ae;
+}
+.header__link{
+  color: #1f4568;
+  font-size: 14px;
+}
+.header__link:hover{
+  text-decoration: none;
+  color:#3a9fff;
+}
+.navbar-toggle .icon-bar{
+  background-color: #8198ae;
+}
+.navbar-toggle {
+    margin: 5px 0;
+}
+.partner{
+  margin-bottom:15px;
+  text-align:center;
+}
+.partner_img{
+  width:160px;
+  opacity:0.5;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+h1{
+    text-align: center;
+}
+
+.display-4{
+  margin-top: 80px;
+  color: #000;
+}
+.new_container{
+  margin-top: 150px;
+  color: black;
+}
+.container p{
+  text-align: center;
+  font-size: 15px;
+  color: #030804;
+}
+
+
+button {
+    background-color: #030804;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+  }
+
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.headingsContainer{
+    text-align: center;
+    font-size: 50px;
+}
+
+.headingsContainer {
+    color: rgb(0, 0, 0);
+}
+.mainContainer{
+    padding: 16px;
+    color: rgb(0, 0, 0);
+
+}
+
+.mainContainer a{
+  background-color: #040607;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 5px;
+  margin: 10px 10px 10px 10px;
+  width: 100%;
+  font-size: 20px;
+}
+
+span.forgotpsd a {
+    float: right;
+    color: whitesmoke;
+    padding-top: 16px;
+  }
+
+.forgotpsd a{
+    color: rgb(74, 146, 235);
+  }
+
+.forgotpsd a:link{
+    text-decoration: none;
+  }
+
+  /* Media queries for the responsiveness of the page */
+  @media screen and (max-width: 600px) {
+    form{
+      width: 25rem;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    form{
+      width: 20rem;
+    }
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule Smart - Aboutpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<a ><link rel="shortcut icon" href="/index" type="image/png" img src="https://image.ibb.co/fOur3b/favicon.png"/></a>
+<meta name="theme-color" content="#3a9fff"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./update.css">
+
+</head>
+<body>
+<header class="header">
+  <div class="container header__container">
+    <div class="header__logo"><img class="header__img" src="https://image.ibb.co/kcVou6/path3000.png" > <li class="header__el"><a href="/index" class="header__link"><h4>Schedule Smart</h4></a></li></div>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+    <div class = "header__menu">
+    <div class = "header__el">
+    <a href="/timetable" class="header__link">Get Started</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/program" class="header__link">Add Program</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/faculty" class="header__link">Add Faculty</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/subject" class="header__link">Add Courses</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/lecture" class="header__link">Add Lecture Room</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/lab" class="header__link">Add Lab Room</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/generate" class="header__link">Generate Timetable</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    </div>
+  </div>
+
+    <div class="container">
+      <h1 class="display-4">Hello! Let's Generate Timetables</h1><br>
+      <p>Fill in the asked details to create an efficient timetables.</p>
+    </div>
+
+    <main role="main">
+      <div class="new_container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2>1. Add Program </h2>
+            <p>Navigate to the "Add Program" section and add the corresponding details. Incorrect Details can also be removed via the "Edit Program" option.</p>
+
+          </div>
+          <div class="col-md-4">
+            <h2>2. Add Faculty</h2>
+            <p>Navigate to the "Add Faculty" section and add the corresponding details. Incorrect Details can also be removed via the "Edit Faculty" option.</p>
+
+          </div>
+          <div class="col-md-4">
+            <h2>3. Add Courses</h2>
+            <p>Navigate to the "Add Courses" section and add the corresponding details. Incorrect Details can also be removed via the "Edit Courses" option.</p>
+
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <h2>4. Add Lecture Room</h2>
+            <p>Navigate to the "Add Lecture Room" section and add the corresponding details. Incorrect Details can also be removed via the "Edit Lecture Room" option.</p>
+
+          </div>
+          <div class="col-md-4">
+            <h2>5. Add Lab Room</h2>
+            <p>Navigate to the "Add Lab Room" section and add the corresponding details. Incorrect Details can also be removed via the "Edit Lab Room" option.</p>
+
+          </div>
+          <div class="col-md-4">
+            <h2>6. Generate Timetable</h2>
+            <p>Navigate to the "Generate Timetable" Section and click on Generate Timetable and wait patiently as our algorithm works its magic.</p>
+
+          </div>
+        </div>
+        </div>
+    </main>
+</header>
+</body>
+</html>
+

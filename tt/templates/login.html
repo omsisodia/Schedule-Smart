@@ -1,0 +1,245 @@
+<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+html, body{
+  font-family: 'Lato', sans-serif;
+  color: #1f4568;
+}
+body{
+background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+}
+.sect{
+  padding: 64px;
+  position: relative;
+}
+.collapse{
+ display: block;
+}
+.header{
+  padding: 30px 50px;
+}
+.header__menu {
+    float: right;
+}
+.header__el{
+    padding: 0 25px;
+    display: inline-block;
+}
+.header__img{
+  display: inline-block;
+  vertical-align: middle;
+}
+.header__logo, .header__menu{
+  display: inline-block;
+  vertical-align: middle;
+}
+.header__title{
+  font-size: 18px;
+  margin: 0;
+  margin-left: 10px;
+  display: inline-block;
+  line-height: 18px;
+  vertical-align: middle;
+}
+.header__light{
+  color: #8198ae;
+}
+.header__link{
+  color: #1f4568;
+  font-size: 14px;
+}
+.header__link:hover{
+  text-decoration: none;
+  color:#3a9fff;
+}
+.navbar-toggle .icon-bar{
+  background-color: #8198ae;
+}
+.navbar-toggle {
+    margin: 5px 0;
+}
+.partner{
+  margin-bottom:15px;
+  text-align:center;
+}
+.partner_img{
+  width:160px;
+  opacity:0.5;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+h1{
+    text-align: center;
+}
+
+
+form{
+    width:60rem;
+    margin-top: 60px;
+    margin-left: 430px;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: #cedae1a2;;
+    border-radius: 60px;
+    border: 10px solid rgba(116, 140, 188, 0.125);
+    padding: 20px 25px;
+}
+input[type=text], input[type=password]{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+  }
+
+button {
+    background-color: #030804;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+  }
+
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.headingsContainer{
+    text-align: center;
+    font-size: larger;
+}
+
+.headingsContainer {
+    color: rgb(0, 0, 0);
+}
+.mainContainer{
+    padding: 16px;
+    color: rgb(0, 0, 0);
+}
+.mainContainer p{
+    color: rgb(0, 0, 0);
+}
+
+.subcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subcontainer a{
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+span.forgotpsd a {
+    float: right;
+    color: whitesmoke;
+    padding-top: 16px;
+  }
+
+.forgotpsd a{
+    color: rgb(74, 146, 235);
+  }
+
+.forgotpsd a:link{
+    text-decoration: none;
+  }
+
+  .register{
+    color: white;
+    text-align: center;
+  }
+
+  .register a{
+    color: rgb(74, 146, 235);
+  }
+
+  .register a:link{
+    text-decoration: none;
+  }
+
+  /* Media queries for the responsiveness of the page */
+  @media screen and (max-width: 600px) {
+    form{
+      width: 25rem;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    form{
+      width: 20rem;
+    }
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule Smart - Aboutpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="https://image.ibb.co/fOur3b/favicon.png"/>
+<meta name="theme-color" content="#3a9fff"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./login.css">
+
+</head>
+<body>
+<header class="header">
+  <div class="container header__container">
+    <div class="header__logo"><img class="header__img" src="https://image.ibb.co/kcVou6/path3000.png" > <li class="header__el"><a href="/index" class="header__link"><h4>Schedule Smart</h4></a></li></div>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+    <div class = "header__menu">
+ <div class = "header__el">
+    <a href="/index" class="header__link">Home</a></li>
+   &nbsp&nbsp  &nbsp&nbsp
+<a href="/contact" class="header__link">Contact us</a>
+      &nbsp&nbsp  &nbsp&nbsp
+<a href="/about" class="header__link">About</a>
+ &nbsp&nbsp &nbsp&nbsp
+
+
+</div>
+    </div>
+    </div>
+        <form action="/loginadmin" method  = "post">{% csrf_token %}
+            <div class="headingsContainer">
+                <h1>Sign in</h1>
+                <p>Sign in with your username and password</p>
+            </div>
+            <div class="mainContainer">
+                <label for="username">Username</label>
+                <input type="text" placeholder="Enter Username" name="username" id = "username" required>
+                <br><br>
+                <label for="pswrd">Password</label>
+                <input type="password" placeholder="Enter Password" name="password" id = "password" required>
+                <div class="subcontainer">
+                    <label>
+                      <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
+                </div>
+                <button type="submit">Login<a href="/signin"></a></button>
+                <p class="register">Not a member?  <a href="/signin">Register here!</a></p>
+                <div>
+                    {{msg}}
+                </div>
+            </div>
+        </form>
+</header>
+</body>
+</html>

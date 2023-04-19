@@ -1,0 +1,193 @@
+<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+html, body{
+  font-family: 'Lato', sans-serif;
+  color: #1f4568;
+}
+
+body{
+background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+}
+.collapse{
+ display: block;
+}
+
+/*menu header*/
+.header{
+  padding: 30px 50px;
+}
+.header__menu {
+    float: right;
+}
+.header__el{
+    padding: 0 25px;
+    display: inline-block;
+}
+.header__img{
+  display: inline-block;
+  vertical-align: middle;
+}
+.header__logo, .header__menu{
+  display: inline-block;
+  vertical-align: middle;
+}
+.header__title{
+  font-size: 18px;
+  margin: 0;
+  margin-left: 10px;
+  display: inline-block;
+  line-height: 18px;
+  vertical-align: middle;
+}
+.header__light{
+  color: #8198ae;
+}
+.header__link{
+  color: #1f4568;
+  font-size: 14px;
+}
+.header__link:hover{
+  text-decoration: none;
+  color:#3a9fff;
+}
+.navbar-toggle .icon-bar{
+  background-color: #8198ae;
+}
+.navbar-toggle {
+    margin: 5px 0;
+}
+.partner{
+  margin-bottom:15px;
+  text-align:center;
+}
+.partner_img{
+  width:160px;
+  opacity:0.5;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+.containerss{
+  padding-top: 20px;
+  padding-left: 140px;
+  padding-right: 140px;
+  color: rgb(0, 0, 0) ;
+  font-size: 19px;
+  font-family: Helvetica, sans-serif;
+}
+.containerss h1{
+  font-family: Open Sans;
+  font-size: 50px;
+}
+
+.row{
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.row p{
+  font-size: 15px;
+}
+
+.btnbtn-secondary{
+  font-size: 20px;
+}
+.btn{
+  background-color:#3a9fff;
+  border-radius: 20px;
+  padding: 10px 25px;
+  color: #fff;
+  box-shadow: 0px 18px 13px -6px rgba(0, 0, 0,0.2);
+  transition: all 0.4s;
+-webkit-transition: all 0.4s;
+-moz-transition: all 0.4s;
+-ms-transition: all 0.4s;
+-o-transition: all 0.4s;
+}
+.btn:hover{
+box-shadow: 0px 25px 18px -6px rgba(0, 0, 0,0.2);
+background-color: #63b2fc;
+color: #fff;
+}
+.btn--white:hover{
+  background-color: #fff;
+  color: #8198ae;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule Smart - Aboutpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="https://image.ibb.co/fOur3b/favicon.png"/>
+<meta name="theme-color" content="#3a9fff"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./about.css">
+
+</head>
+<body>
+<header class="header">
+  <div class="container header__container">
+    <div class="header__logo"><img class="header__img" src="https://image.ibb.co/kcVou6/path3000.png" > <li class="header__el"><a href="/index" class="header__link"><h4>Schedule Smart</h4></a></li></div>
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+    <div class = "header__menu">
+ <div class = "header__el">
+    <a href="/index" class="header__link">Home</a></li>
+   &nbsp&nbsp  &nbsp&nbsp
+<a href="/contact" class="header__link">Contact us</a>
+      &nbsp&nbsp  &nbsp&nbsp
+<a href="/login" class="btn btn--white">Sign In →</a>
+
+</div>
+    </div>
+
+    <form id="form1">
+      <main role="main">
+
+ <div class="containerss">
+   <h1>About SS</h1>
+   <p>Welcome to Schedule Smart! an automatic timetable generator for colleges and universities to schedule their organization's timetable.This project intends to ease the process of creating a timetable and reduce the amount of manual work required. The application accepts information in the form of class schedules, teacher schedules, classroom capacities, time duration, and the number of days courses are held. Based on this information, the software develops a timetable while taking into account different constraints such as avoiding scheduling conflicts, maximizing classroom use, and ensuring that each class is assigned to an appropriate teacher.
+   </p><br>
+   <p><a class="btnbtn-pri-lgmarybtn" href="/contact" role="button">Contact Us &raquo;</a></p>
+ </div>
+
+
+
+
+ <div class="row">
+   <div class="col-md-4">
+     <h1>User</h1>
+     <p>SS provides User accounts which gives the user the privelage to create, manipulate or delete the organization's timetable.</p>
+     <br>
+     <a class="btnbtn-secondary" href="/signin" role="button">Sign Up &raquo;</a>
+   </div>
+   <div class="col-md-4">
+     <h1>How does it Work?</h1>
+     <p>SS uses Python and Mysql database to generate the most optimal and suited timetable for your organization's needs.</p>
+   </div>
+   <div class="col-md-4">
+     <h1>Terms & Conditions</h1>
+     <p>If your organization has any concerns regarding the system please read our Terms and Conditions.</p>
+   </div>
+ </div>
+
+</main>
+ </form>
+</header>
+</body>
+</html>
+
+
+
+
+
+

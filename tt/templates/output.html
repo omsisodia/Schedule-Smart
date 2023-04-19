@@ -1,0 +1,272 @@
+<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+    html, body{
+      font-family: 'Lato', sans-serif;
+      color: #1f4568;
+    }
+    body{
+    background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-position: center;
+    }
+
+    .collapse{
+     display: block;
+    }
+    .header{
+      padding: 30px 40px;
+    }
+
+    .header__menu {
+        float: right;
+    }
+    .header__el{
+        display: inline-block;
+    }
+    .header__img{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .header__logo, .header__menu{
+      display: inline-block;
+      font-size: 5px;
+
+    }
+
+    .header__light{
+      color: #8198ae;
+    }
+    .header__link{
+      color: #1f4568;
+      font-size: 14px;
+    }
+    .header__link:hover{
+      text-decoration: none;
+      color:#3a9fff;
+    }
+    .navbar-toggle .icon-bar{
+      background-color: #8198ae;
+    }
+    .navbar-toggle {
+        margin: 5px 0;
+    }
+    .partner{
+      margin-bottom:15px;
+      text-align:center;
+    }
+    .partner_img{
+      width:160px;
+      opacity:0.5;
+        transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -ms-transition: all 0.4s;
+        -o-transition: all 0.4s;
+    }
+
+    h1{
+        text-align: center;
+    }
+    form{
+        width: 1100;
+        height: auto ;
+        margin: auto;
+        color:rgb(0, 0, 0);
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: #cedae1a2;;
+        border-radius: 60px;
+        border: 10px solid rgba(116, 140, 188, 0.125);
+        padding: 20px 25px;
+        text-align: center;
+    }
+    input[type=text], input[type=number]{
+        width: 50%;
+        height: 5%;
+        margin: 10px 0;
+        border-radius: 5px;
+        padding: 5px 5px;
+      }
+
+    .mainContainer{
+      font-size: 20px;
+      /* marg: 100px; */
+
+    }
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    }
+
+    th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    height: 50px;
+    }
+
+
+    th {
+    background-color: #ddd;
+    text-align: center;
+    }
+    tr:nth-child(even) {
+    background-color: #f2f2f2;
+    }
+
+
+    .headingsContainer{
+      color: black;
+    }
+    .headingsContainer h1{
+      text-align: center;
+      font-size: 50px;
+
+    }
+    .headingsContainer p{
+      text-align: center;
+      font-size: 20px;
+    }
+
+    button[type=reset], input[type=submit]{
+      margin-left: 45px;
+    }
+    </style>
+    <!DOCTYPE html>
+    <html lang="en" >
+    <head>
+      <meta charset="UTF-8">
+      <title>Schedule Smart - Aboutpage</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <a ><link rel="shortcut icon" href="/index" type="image/png" img src="https://image.ibb.co/fOur3b/favicon.png"/></a>
+    <meta name="theme-color" content="#3a9fff"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="generate.css">
+
+    </head>
+    <body>
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__logo"><img class="header__img" src="https://image.ibb.co/kcVou6/path3000.png" > <li class="header__el"><a href="/index" class="header__link"><h4>Schedule Smart</h4></a></li></div>
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              <div class = "header__menu">
+        <div class = "header__el">
+        <a href="/timetable" class="header__link">Get Started</a></li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/program" class="header__link">Add Program</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/faculty" class="header__link">Add Faculty</a></li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/subject" class="header__link">Add Courses</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/lecture" class="header__link">Add Lecture Room</a></li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/lab" class="header__link">Add Lab Room</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/generate" class="header__link">Generate Timetable</a></li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        </div>
+        </div>
+        <br>
+
+        <div class="headingsContainer">
+          <h1>Generated Timetables</h1>
+          <!-- <p>Please use the following form to enter the details into the system for generating timetable.</p> -->
+          <br>
+      </div>
+        <br>
+
+        <form action="">
+
+            <div class="mainContainer">
+                <p>Time Table 1</p>
+                <table>
+                    <tr>
+                      <td><b>Time </b></td>
+                      <td><b>Monday</b></td>
+                      <td><b>Tuesday</b></td>
+                      <td><b>Wednesday</b></td>
+                      <td><b>Thursday</b></td>
+                      <td><b>Friday</b></td>
+                    </tr>
+                    <tr>
+                      <td>08:30-09:25</td>
+                      <td>CSET104-LAB <br> Dr. Rashid Ali</td>
+                      <td>CSET104-Lec<br>Mr. Asad Mohammed Khan</td>
+                      <td>Break</td>
+                      <td>EECE105-LAB<br>Prof. Mohammad Sarosh Umar</td>
+                      <td>CSET105-Lec<br>Dr. Mohd. Sharique</td>
+                    </tr>
+                    <tr>
+                      <td>09:30-10:25</td>
+                      <td>CSET104-LAB<br> Dr. Rashid Ali</td>
+                      <td>Break</td>
+                      <td>CSET104-LAB <br>Dr. Rashid Ali</td>
+                      <td>EECE105-LAB<br>Prof. Mohammad Sarosh Umar</td>
+                      <td>CSET104-LAB<br>Mr. Nadeem Akhtar</td>
+                    </tr>
+                    <tr>
+                      <td>10:40-11:35</td>
+                      <td>Break</td>
+                      <td>CSET105-LAB<br>Prof. M.M. Sufyan Beg</td>
+                      <td>CSET104-LAB<br> Dr. Rashid Ali</td>
+                      <td>CSET104-Lec<br>Mr. Tameem Ahmad</td>
+                      <td>CSET104-LAB<br>Mr. Nadeem Akhtar</td>
+                    </tr>
+                    <tr>
+                      <td>11:40-12:35</td>
+                      <td>CSET105-Lec<br>Prof. Nesar Ahmad</td>
+                      <td>CSET105-LAB<br>Prof. M.M. Sufyan Beg</td>
+                      <td>CSET105-Lec<br>Mr. Tameem Ahmad</td>
+                      <td>Break</td>
+                      <td>Break</td>
+                    </tr>
+                    <tr>
+                      <td>12:40-1:25</td>
+                      <td><p style="color:tomato;">LUNCH BREAK</p></td>
+                      <td><p style="color:tomato;">LUNCH BREAK</p></td>
+                      <td><p style="color:tomato;">LUNCH BREAK</p></td>
+                      <td><p style="color:tomato;">LUNCH BREAK</p></td>
+                      <td><p style="color:tomato;">LUNCH BREAK</p></td>
+                    </tr>
+                    <tr>
+                      <td>01:30-02:25</td>
+                      <td>EECE105-LAB<br>Mr. Nadeem Akhtar</td>
+                      <td>EECE105-Lec<br>Dr. Mohd. Sharique</td>
+                      <td>Break</td>
+                      <td>CSET105-Lec<br>Mr. Misbahur Rahman Warsi</td>
+                      <td>CSET104-Lec<br>Prof. Nesar Ahmad</td>
+                    </tr>
+                    <tr>
+                      <td>02:25-03:30</td>
+                      <td>EECE105-LAB<br>Mr. Nadeem Akhtar</td>
+                      <td>Break</td>
+                      <td>Break</td>
+                      <td>Break</td>
+                      <td>Break</td>
+                    </tr>
+                    <tr>
+                      <td>03:40-04:35</td>
+                      <td>Break</td>
+                      <td>CSET105-Lec<br>Mr. Misbahur Rahman Warsi</td>
+                      <td>EECE105-LAB<br>Prof. Shamshad Husain</td>
+                      <td>Break</td>
+                      <td>EECE105-LAB<br>Dr. Mohd. Sharique</td>
+                    </tr>
+                    <tr>
+                      <td>04:35-05:30</td>
+                      <td>CSET104-Lec<br>Mr. Tameem Ahmad</td>
+                      <td>Break</td>
+                      <td>EECE105-LAB<br>Prof. Shamshad Husain</td>
+                      <td>Break</td>
+                      <td>EECE105-LAB<br>Dr. Mohd. Sharique</td>
+                    </tr>
+                  </table>
+
+
+            </div>
+        </form>
+    </header>
+        </body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="./script.js"></script>
+    </html>
