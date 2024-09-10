@@ -7,6 +7,8 @@ import numpy as np
 import math
 import random
 import json
+from django.db import connection
+import bcrypt
 
 def callindex(request):
     return render(request, 'index.html')
@@ -63,23 +65,39 @@ def view_program(request):
     return render(request, 'view_program.html')
 
 
-
 def loginadmin(request):
     username = request.POST["username"]
     password = request.POST["password"]
 
     print(username, password)
 
-    dbe, cmd = pool.ConnectionPool()
-    q = "select * from admin where username = '{}' and password = '{}'".format(username, password)
-    cmd.execute(q)
-    result = cmd.fetchone()
-    dbe.close()
+    with connection.cursor() as cursor:
+        q = "SELECT * FROM admin WHERE username = %s AND password = %s"
+        cursor.execute(q, [username, password])
+        result = cursor.fetchone()
+
     print(result)
-    if(result):
+    if result:
         return render(request, 'timetable.html', {"msg": ""})
     else:
-        return render(request, 'login.html', {"msg": "Invalid Username or Password !", 'result' : result})
+        return render(request, 'login.html', {"msg": "Invalid Username or Password !", 'result': result})
+
+# def loginadmin(request):
+#     username = request.POST["username"]
+#     password = request.POST["password"]
+
+#     print(username, password)
+
+#     dbe, cmd = pool.ConnectionPool()
+#     q = "select * from admin where username = '{}' and password = '{}'".format(username, password)
+#     cmd.execute(q)
+#     result = cmd.fetchone()
+#     dbe.close()
+#     print(result)
+#     if(result):
+#         return render(request, 'timetable.html', {"msg": ""})
+#     else:
+#         return render(request, 'login.html', {"msg": "Invalid Username or Password !", 'result' : result})
 
 
 def callsignin(request):
@@ -99,6 +117,7 @@ def callsignin(request):
     # print(result)
 
     return render(request, 'login.html', {"msg": "Registration Successfull"})
+
 
 def callprogram(request):
     programs = request.POST['programs']
