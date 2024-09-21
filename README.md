@@ -5,7 +5,7 @@ The automated timetable generator project aims to provide an efficient and effec
 
 Here are glimps of web-application
 
-Home Page
+Home Page 
 
 ![Screenshot (51)](https://github.com/omsisodia/Schedule-Smart/assets/99199126/6d1631b7-8dd7-4b2f-b971-c1699b67799b)
 
